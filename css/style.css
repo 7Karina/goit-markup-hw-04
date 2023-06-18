@@ -53,7 +53,7 @@ ul{
 
 .header{
     border-bottom: 1px solid #e7e9fc;
-
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 
 .header-navigation{
@@ -116,6 +116,7 @@ ul{
 
 .current{
     position: relative;
+    color: #404bbf;
 }
 
 .current::after{
@@ -160,6 +161,7 @@ ul{
     display: flex;
     padding: 24px 0;
     gap: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .header-contacts .list:hover,
@@ -176,10 +178,11 @@ ul{
     ),
     url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
-    background-position: absolute;
+    background-position: center;
     background-size: cover;
     background-color: #2E2F42;
     padding: 188px 0;
+    max-width: 1440px;
 }
 
 .hero-container{
@@ -215,6 +218,7 @@ ul{
     border-radius: 4px;
     border: none;
     min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -333,6 +337,9 @@ ul{
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 
@@ -371,10 +378,17 @@ ul{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+.icon-svg:hover,
+.icon-svg:focus{
+    background-color: #404bbf;
+}
 
+.team-icons{
+    fill: #f4f4fd;
+}
 
 .container-info{
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 
 .team-list {
@@ -417,6 +431,7 @@ ul{
     letter-spacing: 0.02em;
     color: var(--color-grey);
     margin-bottom: 72px;
+    color: #2e2f42;
 }
 
 .fifth-icon-list{
@@ -640,6 +655,7 @@ ul{
     padding: 12px 24px;
     border: 1px solid #e7e9fc;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-button-link:hover,
@@ -647,18 +663,24 @@ ul{
     color: #FFFFFF;
     background-color: #404BBF;
     border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-link {
     text-decoration: none;
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
 
+.portfolio-link:hover,
+.portfolio-link:focus{
+    box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-info{
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
-    /* margin-bottom: 8px; */
 }
 
 .portfolio-list  {
@@ -673,6 +695,7 @@ ul{
     text-decoration: none;
     width: calc((100% - 48px) / 3);
     flex-wrap: wrap;
+    position: relative;
 }
 
 .portfolio-subtitle {
@@ -682,6 +705,7 @@ ul{
     letter-spacing: 0.02em;
     color: #2E2F42;
     margin-bottom: 8px;
+    text-align: start;
 }
 
 .portfolio-text {
@@ -691,6 +715,26 @@ ul{
     color: #434455;
 }
 
+.portfolio-cover-block {
+    position: relative;
+    background-color: #4D5AE5;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.cover-text-block {
+    font-size: 16px;
+    line-height: 1.50;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 /**-----------------FOOTER--------------*/
 .footer-logo {
     font-family: "Raleway" sans-serif;
